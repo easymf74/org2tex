@@ -1,0 +1,97 @@
+*Elemente-Übersicht*
+
+* Zweck
+Hier möchte ich zunächst die gängigsten Elemente in org-Mode
+und in latex gegenüberstellen. Die Aufstellung hat keinen
+Anspruch auf Vollständigkeit und wird ggf. später
+erweitert.  Diese Übersicht ist die Grundlage für die
+Programmierung eines Converters aus dem org-mode in eine
+latex-Datei. 
+
+* Übersicht
+** Thema
+*** org-mode
+*Thema* in der ersten Zeile des Dokuments
+*** Latex
+\title{Thema}
+** Überschrift 1.Grades
+*** org-mode
+ * Ueberschrift
+dabei ist der Stern das erste Zeichen der Zeile
+*** Latex
+\section{Überschrift 1. Grades}
+
+** Überschrift 2. Grades
+*** org-Mode
+ ** Überschrift2
+dabei sind die beiden Sterne die ersten Zeichen der Zeile
+*** Latex
+\subsection{Überschrift2}
+
+** Überschrifr 3. Grades
+*** org-mode
+ *** Überschrift3
+dabei sind die 3 Sterne die ersten Zeichen der Zeile
+*** Latex
+\subsubsection{Überschrift3}
+** Weitere Unterteilungen
+*** org-mode
+ Jeweils die Anzahl der Sterne am Anfang der Zeile bestimmt
+ den Grad der Überschrift
+*** Latex
+Es gibt keine tiefere Verschachtelungsebene. Um diese
+darzustellen werden weitere Unterteilungen jeweils in Blöcke
+zwischen 
+\begin{enumerate}
+und 
+\end{enumerate}
+und die überschriften mit
+\item Überschrift erfasst.
+Dadurch werden diese Unterpunkte durchnummeriert.
+Diese Blöcke können verschachtelt werden um weitere
+Unterpunkte einzufügen.
+** Listenpunkte unnummeriert
+*** Emacs
+- Listenpunkt
+- Listenpunkt2
+  - Listenunterpunkt
+- Definitionslistenpunkt :: definition
+Beginnt mit einem - oder Plus, bei Unterpunkten kann
+zusätzlich noch ein *-Symbol verwendet werden.
+Dann ein Leerzeichen gefolgt von Text
+*** Latex
+Listenpunkte einer nicht nummerierten Liste werden in Blöcke
+zwischen
+\begin{itemize}
+und
+\end{itemize}
+mit 
+\item Listenpunkt 
+erfasst.
+Unterlistenpunkte werden in weiteren Blöcken geschachtelt
+
+Deffinitionslistenpunkte erhalten ein Keywort welches in
+Eckigen und geschweiften klammern vor der Deffinition
+geschrieben wird.
+Beispiel:
+\item[{Definition}] was ist das? 
+** Listenpunkte nummeriert.
+*** Emacs
+1.1.2. Listenpunkt 1.1.2.
+oder
+1. 
+2.1)
+Die Nummeriertung steht am Anfang der Zeile
+* Tabelle
+| Unnummerierte Liste          |                  |                              |
+| Unterpunkt unnummeriert      |                  |                              |
+| Nummerierte Liste            |                  |                              |
+| Unterpunkt nummerierte Liste |                  |                              |
+| Definitionsliste             |                  |                              |
+| Link                         |                  |                              |
+| Anker                        |                  |                              |
+| Tabelle                      |                  |                              |
+| Absatz                       |                  |                              |
+|------------------------------+------------------+------------------------------|
+
+

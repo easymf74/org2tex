@@ -1,0 +1,9 @@
+*Elemente-Übersicht*
+
+* Zweck
+Hier möchte ich zunächst die gängigsten Elemente in org-Mode
+und in latex gegenüberstellen. Die Aufstellung hat keinen
+Anspruch auf Vollständigkeit und wird ggf. später
+erweitert.  Diese Übersicht ist die Grundlage für die
+Programmierung eines Converters aus dem org-mode in eine
+latex-Datei. 
